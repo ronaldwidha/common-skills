@@ -1,0 +1,8 @@
+# macOS / editors
+.DS_Store
+*.swp
+*~
+
+# Tool output from skill scripts
+node_modules/
+__pycache__/
