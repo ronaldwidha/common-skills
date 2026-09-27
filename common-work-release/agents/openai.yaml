@@ -1,0 +1,4 @@
+interface:
+  display_name: "Common Work Release"
+  short_description: "Keep release records current"
+  default_prompt: "Use $common-work-release to update the release records for this target version."

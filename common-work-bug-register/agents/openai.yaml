@@ -1,0 +1,4 @@
+interface:
+  display_name: "Common Bug Register"
+  short_description: "Register and resolve bugs in bugs/"
+  default_prompt: "Use $common-work-bug-register to register this bug."

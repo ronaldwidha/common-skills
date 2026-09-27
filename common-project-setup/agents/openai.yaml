@@ -1,0 +1,4 @@
+interface:
+  display_name: "Common Project Setup"
+  short_description: "Set up a coding project with the standard lifecycle"
+  default_prompt: "Use $common-project-setup to set up or reconcile this repository."

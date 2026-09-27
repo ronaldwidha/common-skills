@@ -1,0 +1,5 @@
+# Project skills: copied into coding projects by `install.sh --project <dir>` (usually via
+# common-project-setup), never into ~/.agents/skills. One skill name per line.
+common-work-start
+common-work-bug-register
+common-work-release

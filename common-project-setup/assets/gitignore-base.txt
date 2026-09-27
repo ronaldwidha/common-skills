@@ -1,0 +1,12 @@
+# OS and editors
+.DS_Store
+*.swp
+*~
+
+# Local secrets and overrides (commit an .env.example instead)
+.env
+.env.*
+!.env.example
+
+# Local agent settings (the shared setup in .agents/, .claude/skills, AGENTS.md is tracked)
+.claude/settings.local.json

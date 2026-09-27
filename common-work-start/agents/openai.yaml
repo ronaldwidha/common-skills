@@ -1,0 +1,4 @@
+interface:
+  display_name: "Common Work Start"
+  short_description: "Start and complete worklog records"
+  default_prompt: "Use $common-work-start to create or update the work record for this change."
