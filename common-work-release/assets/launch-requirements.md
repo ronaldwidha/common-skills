@@ -8,6 +8,8 @@ Target: <version and build if known>
 
 ## Migration and compatibility
 
+- New persisted state this target adds: <stores, keys, record types, formats, ...; or none>. Moves into
+  `releases/README.md` → *What's in the field* when this target is published.
 - <Persisted data, schemas, stores, preferences, formats, permissions, entitlements, APIs, and client interoperability.>
 - <Migration order, retry/idempotency behavior, success marker, fallback, and rollback.>
 - <Or: No migration is required, with the audit basis.>

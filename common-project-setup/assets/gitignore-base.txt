@@ -10,3 +10,6 @@
 
 # Local agent settings (the shared setup in .agents/, .claude/skills, AGENTS.md is tracked)
 .claude/settings.local.json
+
+# Logs (build and tool output)
+*.log

@@ -6,3 +6,8 @@
 # Tool output from skill scripts
 node_modules/
 __pycache__/
+
+# Local config and editors
+.env
+.idea/
+.vscode/

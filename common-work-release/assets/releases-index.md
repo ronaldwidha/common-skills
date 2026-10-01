@@ -1,45 +1,62 @@
 # Releases
 
-Release records describe the delta from the last verified published baseline to
-one assigned target version. The canonical version declarations live in
-<!-- point at the real file: package.json, project.yml, Cargo.toml, ... -->.
-
-Each target's directory is created when the target is assigned and updated
-alongside the work, not written at release time.
+Each target version's records describe the delta from the published baseline below. Version declaration:
+`<path/to/file>` <!-- package.json, project.yml, Cargo.toml, ... -->.
 
 ## Published baseline
 
-- **Version:**
-- **Build:**
-- **Tag:**
-- **Evidence:** <!-- tag, archive, deployment record, or store metadata -->
+- **Version:** <X.Y.Z, or unknown>
+- **Build:** <build number, or —>
+- **Published:** <YYYY-MM-DD>
+- **Source:** <tag> → <commit>
+- **Evidence:** <store record, archive, deployment ID, or tag; never intent>
 
-This baseline changes only when a later published build is verified from
-durable evidence. Intent to ship is not evidence.
+## What's in the field
 
-## Current target
+- **Stores and schemas:** <names and versions, or none>
+- **Preference / config keys:** <keys, or none>
+- **Cloud and server state:** <containers, zones, record types, tables, subscriptions, or none>
+- **Formats and entry points:** <file formats, URL schemes, public APIs, entitlements, or none>
 
-- **Version:**
-- **Build:**
-- **Branch:**
-- **Status:** <!-- declared / implemented / submitted / published, and what remains -->
+## Compatibility rules
 
-<!-- Delete this section if there is no target in flight. -->
-
-## Branch lines
-
-<!-- Only when the repository maintains more than one line. Build numbers are
-     global per distribution identity, so lines sharing one allocate
-     monotonically across both rather than each keeping its own sequence. -->
-
-| Line | Branch | Distinguishing constraint |
-| --- | --- | --- |
+- <Standing rule for changing the state above.>
 
 ## Release index
 
-| Version | Build | Line | Status | Records |
-| --- | --- | --- | --- | --- |
+| Version | Build | From | Branch | Line | Status | Records |
+|---|---|---|---|---|---|---|
 
-<!-- Row format:
-| 2.0.0 | 42 | default | Target, unpublished | [launch requirements](2.0.0/launch-requirements.md) · [release notes](2.0.0/release-notes.md) |
+<!-- Index rules (from common-work-release; keep this comment in the file).
+
+Shape: exactly these sections in this order: Published baseline, What's in the field, Compatibility rules, (Branch
+lines, only if the repository has more than one), Release index. Keep every field line; write "unknown" or "none"
+instead of deleting one. Don't add, remove, rename, or reorder table columns. Detail belongs in the version folders.
+
+Published baseline: changes only in the change that records publication evidence. What's in the field lists only
+what that baseline shipped; a target's additions stay in its launch-requirements.md until it is published.
+
+Columns:
+- Version: X.Y.Z, newest first. One row per target, including published and folded ones.
+- Build:   build number, or — if not assigned.
+- From:    the published baseline this target's delta starts from (X.Y.Z).
+- Branch:  `release/X.Y.Z` or the branch it is built on; — for old releases where it's unknown.
+- Line:    the branch line from the Branch lines table, or — when there is only one line.
+- Status:  Planned | In development | Candidate | Published | Folded into X.Y.Z. Nothing else; open gates are listed
+           in launch-requirements.md, not here.
+- Records: [launch](X.Y.Z/launch-requirements.md) · [notes](X.Y.Z/release-notes.md). Historical versions link the files
+           they actually have, under their existing names.
+
+Branch lines (add above the Release index only when there is more than one line):
+
+## Branch lines
+
+| Line | Branch | Distinguishing constraint |
+|---|---|---|
+| main | `main` | iOS 18+, App Store |
+
+Example rows:
+| 2.1.0 | 31 | 2.0.0 | `release/2.1.0` | — | In development | [launch](2.1.0/launch-requirements.md) · [notes](2.1.0/release-notes.md) |
+| 2.0.0 | 24 | 1.0.0 | `release/2.0.0` | — | Published | [launch](2.0.0/launch-requirements.md) · [notes](2.0.0/release-notes.md) |
+| 1.0.0 | 12 | — | — | — | Published | [notes](1.0.0/RELEASE_NOTES.md) |
 -->

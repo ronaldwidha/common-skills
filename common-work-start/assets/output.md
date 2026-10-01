@@ -23,4 +23,5 @@ Completed: YYYY-MM-DD
 
 ## Remaining gates
 
-- <Open acceptance, rollout, publication, or monitoring work; or none.>
+- <Each open check, linked to where it now lives (a launch gate in `releases/<version>/launch-requirements.md`, or a
+  bug); or none. A gate listed only here keeps the item Open.>

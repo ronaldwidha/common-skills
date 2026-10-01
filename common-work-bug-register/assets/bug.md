@@ -1,6 +1,10 @@
 # Bug <bug-id>: <Short statement of the problem>
 
-Status: <open | open; blocks release | open; product limitation | resolved | won't fix>
+Status: <open | open; blocks release | open; product limitation | resolved | won't fix | duplicate of …>
+
+Severity: <Release blocking | High | Medium | Low | Test only>
+
+Found in: <work record link, or how it was found>
 
 <Observed behavior: what happens, under what conditions.>
 
