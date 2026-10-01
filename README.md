@@ -65,13 +65,24 @@ my-app/
 
 ## Get started
 
-Install [common-agents](https://github.com/ronaldwidha/common-agents) (optional, best results) and this repo once (see [Install and update](#install-and-update)). Then, in any project, ask your coding agent to run:
+**1. Install once** (copies the skills into `~/.agents/skills`):
+
+```sh
+git clone https://github.com/ronaldwidha/common-skills.git && cd common-skills
+./install.sh
+```
+
+Optionally install [common-agents](https://github.com/ronaldwidha/common-agents) too, for the best results (see below).
+
+**2. Set up each project.** Open the project in your coding agent and run:
 
 ```
 /common-project-setup
 ```
 
-It sets up the agent adapters, `.gitignore`, the three record folders, and the lifecycle section in `AGENTS.md`, all in one pass. It works on new repositories, and it can bring existing ones into line. To copy just the skills by hand, use `./install.sh --project <dir>`.
+It sets up the agent adapters, `.gitignore`, the three record folders, and the lifecycle section in `AGENTS.md`, all in one pass. It works on new repositories, and it can bring existing ones into line.
+
+That's it. To copy just the skills into a project by hand, without the rest of the setup, use `./install.sh --project <dir>`.
 
 ## Works out of the box with Codex and Cursor
 
@@ -99,10 +110,11 @@ Each template (intent, plan, output, bug, indexes, decisions, launch requirement
 
 The three indexes are all `README.md` (`worklog/`, `bugs/`, `releases/`), so a folder view shows them. The worklog and bug indexes share one shape: one line per item, a one-word status (`Open` / `Resolved` / …), a counts line, and no evidence in the rows. Agents read them at the start of every task, so they stay small.
 
-## Install and update
+## Updating and maintaining
+
+You only need this section after you change a skill here, or want to see which projects are out of date.
 
 ```sh
-git clone https://github.com/ronaldwidha/common-skills.git && cd common-skills
 ./install.sh check                        # what would change; changes nothing
 ./install.sh                              # global skills -> ~/.agents/skills
 ./install.sh --project ~/Coding/my-app    # project skills -> ~/Coding/my-app/.agents/skills
