@@ -81,7 +81,7 @@ Claude Code and Kiro don't read that layout on their own. Claude Code wants a `C
 
 ## Depends on
 
-- **A POSIX shell and common Unix tools**, on macOS or Linux. `install.sh` and the tests are plain `sh` scripts (they use `find`, `sed`, `awk`, `cp`, and `sha256sum` or `shasum`). The skills themselves are plain Markdown and work anywhere an agent reads them. I've run the tests on macOS only; Linux should work but is untested.
+- **A POSIX shell and common Unix tools**, on macOS, Linux, or Windows through WSL. `install.sh` and the tests are plain `sh` scripts (they use `find`, `sed`, `awk`, `cp`, and `sha256sum` or `shasum`). CI runs the tests on Ubuntu and macOS. The skills themselves are plain Markdown and work anywhere an agent reads them. On WSL, clone into the Linux filesystem (for example `~/code`), not `/mnt/c`, so file modes and line endings stay intact.
 - **[common-agents](https://github.com/ronaldwidha/common-agents)** is optional but recommended. It sets up `~/.agents/skills/` and points each agent at it, and provides `common-agent-setup`. Without it, `install.sh` creates the folders it needs, and the skills work in Codex and Cursor.
 
 ## Skills

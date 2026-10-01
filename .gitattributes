@@ -1,0 +1,4 @@
+# Keep shell scripts and skills LF on every OS (WSL/Windows checkouts must not get CRLF).
+* text=auto eol=lf
+*.sh text eol=lf
+install.sh text eol=lf
